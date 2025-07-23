@@ -1,0 +1,25 @@
+require: rubocop-minitest
+
+AllCops:
+  SuggestExtensions: false
+
+Naming/VariableName:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Naming/FileName:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Naming/PredicateName:
+  Enabled: false

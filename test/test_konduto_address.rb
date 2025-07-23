@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require 'factory_girl'
 
@@ -9,7 +11,7 @@ class KondutoAddressTest < MiniTest::Test
 
     expectedJSON = load_resource('address.json')
     actualJSON   = address.to_hash
-    
+
     assert_equal expectedJSON, actualJSON, 'address serialization failed'
 
     address_from_json = KondutoAddress.new expectedJSON

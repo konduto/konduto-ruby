@@ -1,131 +1,349 @@
 {
-  "id": "1",
-  "visitor": "a9031kdlas",
-  "timestamp": 123123123123,
-  "total_amount": 120.5,
-  "shipping_amount": 5.0,
-  "tax_amount": 3.0,
-  "currency": "USD",
-  "installments": 1,
-  "ip": "192.168.0.1",
-  "first_message": "2015-06-09T18:27:01Z",
-  "messages_exchanged": 2,
-  "purchased_at": "2015-06-09T18:27:01Z",
-  "customer": {
-    "id": "1",
-    "name": "José da Silva",
-    "email": "jose.silva@gmail.com",
-    "tax_id": "01234567890",
-    "phone1": "11987654321",
-    "phone2": "1133333333",
-    "vip": false,
-    "new": false,
-    "created_at": "2015-06-09"
-  },
-  "recommendation": "approve",
-  "geolocation": {
-    "city": "São Paulo",
-    "state": "SP",
-    "country": "BR"
+  "agent":
+  {
+    "category": "vendedor",
+    "created_at": "2010-12-25",
+    "dob": "1970-12-25",
+    "id": "28372",
+    "login": "julia.silva",
+    "name": "Júlia da Silva",
+    "tax_id": "12345678909"
   },
   "analyze": true,
-  "shipping": {
-    "name": "Konduto",
+  "billing":
+  {
     "address1": "R. Teodoro Sampaio, 2393",
     "address2": "CJ. 111",
-    "zip": "05406-200",
     "city": "São Paulo",
-    "state": "SP",
-    "country": "BR"
-  },
-  "billing": {
+    "country": "BR",
+    "lat": -23.565779450573725,
+    "lon": -46.691031683668946,
     "name": "Konduto",
-    "address1": "R. Teodoro Sampaio, 2393",
-    "address2": "CJ. 111",
-    "zip": "05406-200",
-    "city": "São Paulo",
     "state": "SP",
-    "country": "BR"
+    "zip": "05406-200"
   },
-  "payment": [
+  "currency": "USD",
+  "customer":
+  {
+    "created_at": "2015-06-09",
+    "dob": "1969-07-20",
+    "document_type": "cpf",
+    "email": "jose.silva@gmail.com",
+    "id": "1",
+    "mother_name": "Maria Silva",
+    "name": "José da Silva",
+    "new": false,
+    "phone1": "11987654321",
+    "phone2": "1133333333",
+    "risk_level": "low",
+    "risk_score": 0.5,
+    "tax_id": "01234567890",
+    "type": "A1",
+    "vip": false
+  },
+  "delivery":
+  {
+    "delivery_company": "GFL",
+    "delivery_method": "retira_loja",
+    "estimated_delivery_date": "2021-05-06",
+    "estimated_shipping_date": "2021-05-06"
+  },
+  "destination_accounts":
+  [
     {
-      "bin": "123",
-      "last4": "1234",
+      "amount": 200.0,
+      "bank_account": "01234-5",
+      "bank_branch": "0001",
+      "bank_code": "17298092",
+      "bank_name": "Itaú BBA",
+      "holder_name": "José Armando",
+      "holder_tax_id": "123.456-789-09",
+      "id": "Conta 003",
+      "key_type": "pix_evp",
+      "key_value": "123e4567-e89b-12d3-a456-426655440000"
+    }
+  ],
+  "events":
+  [
+    {
+      "date": "2021-01-01T03:00:00Z",
+      "name": "Tia Ana no Maracanã",
+      "subtype": "sertanejo",
+      "tickets":
+      [
+        {
+          "attendee":
+          {
+            "dob": "1990-10-28",
+            "document": "123456789",
+            "document_type": "cpf"
+          },
+          "category": "regular",
+          "id": "123456",
+          "premium": true,
+          "section": "Pista Premium"
+        }
+      ],
+      "type": "show",
+      "venue":
+      {
+        "address": "Av. Maracanã s/n",
+        "capacity": 8000,
+        "city": "Rio de Janeiro",
+        "country": "BR",
+        "name": "Estádio do Maracanã",
+        "state": "RJ"
+      }
+    }
+  ],
+  "external_device":
+  {
+    "browser": "Chrome 104.0.5112.79",
+    "category": "Mobile",
+    "fingerprint": "51asd1asd445asd85d4g98s",
+    "language": "pt-br",
+    "manufacturer": "Samsung ",
+    "model": "Galaxy S22 Ultra",
+    "os": "Android 12 Samsung One UI 4.1",
+    "platform": "Android",
+    "provider": "SDK"
+  },
+  "first_message": "2015-06-09T18:27:01Z",
+  "geolocation":
+  {
+    "city": "São Paulo",
+    "country": "BR",
+    "state": "SP"
+  },
+  "hotel":
+  {
+    "address1": "Rod Três, 46",
+    "address2": "Vidinha",
+    "category": "Gold",
+    "city": "Pouso Alto",
+    "country": "BR",
+    "name": "Hotel Konduto",
+    "rooms":
+    [
+      {
+        "board_basis": "economy",
+        "check_in_date": "2022-02-14",
+        "check_out_date": "2022-03-01",
+        "code": "25487",
+        "guests":
+        [
+          {
+            "dob": "1985-05-08",
+            "document": "12345678990",
+            "document_type": "cpf",
+            "name": "João Silva",
+            "nationality": "BR"
+          }
+        ],
+        "number": "201A",
+        "number_of_guests": 1,
+        "type": "A1"
+      }
+    ],
+    "state": "MG",
+    "zip": "12345-123"
+  },
+  "id": "1",
+  "installments": 1,
+  "ip": "192.168.0.1",
+  "messages_exchanged": 2,
+  "options":
+  {
+    "real_time": true,
+    "sales_channel": "app"
+  },
+  "origin_account":
+  {
+    "balance": 250.0,
+    "bank_account": "123123",
+    "bank_branch": "0001",
+    "bank_code": "00000000",
+    "bank_name": "Banco do Brasil",
+    "holder_name": "Alberto Armando",
+    "holder_tax_id": "123.456.789-09",
+    "id": "ABC123DEF",
+    "key_type": "pix_phone",
+    "key_value": "+5511912341234"
+  },
+  "payment":
+  [
+    {
+      "amount": 100.65,
+      "avs_result": "ok",
+      "bin": "123456",
+      "tax_id": "12345678990",
+      "cvv_result": "valid",
       "expiration_date": "012014",
+      "last4": "1234",
+      "number_of_retries": 1,
+      "sha1": "1a2b3c4d5e6f7A8B9C10D11E12F1a2b3c4d5e6f7",
       "status": "approved",
       "type": "credit"
     }
   ],
-  "shopping_cart": [
+  "point_of_sale":
+  {
+    "address": "Rua Dez de Abril, 23",
+    "city": "São Paulo",
+    "country": "BR",
+    "id": "000500",
+    "lat": -23.5677666,
+    "long": -46.6487763,
+    "name": "Capital Representações",
+    "state": "SP",
+    "zip": "01001-001"
+  },
+  "purchased_at": "2015-06-09T18:27:01Z",
+  "recommendation": "approve",
+  "recurring": true,
+  "risk_level": "low",
+  "sales_channel": "e-commerce",
+  "scheduled": false,
+  "seller":
+  {
+    "created_at": "2015-06-09",
+    "id": "seller_id",
+    "name": "Seller Name"
+  },
+  "shipping":
+  {
+    "address1": "R. Teodoro Sampaio, 2393",
+    "address2": "CJ. 111",
+    "city": "São Paulo",
+    "country": "BR",
+    "lat": -23.565779450573725,
+    "lon": -46.691031683668946,
+    "name": "Konduto",
+    "state": "SP",
+    "zip": "05406-200"
+  },
+  "shipping_amount": 5.0,
+  "shopping_cart":
+  [
     {
-      "sku": "9919023",
-      "product_code": "123456789999",
       "category": 201,
-      "name": "Green T-Shirt",
+      "created_at": "2022-04-25",
       "description": "Male Green T-Shirt V Neck",
+      "discount": -10.99,
+      "name": "Green T-Shirt",
+      "product_code": "123456789999",
+      "quantity": 1.0,
+      "sku": "9919023",
       "unit_cost": 1999.99,
-      "quantity": 1
+      "delivery_type": "express delivery",
+      "delivery_sla_in_minutes": 50,
+      "seller_id": "11"
     },
     {
-      "sku": "0017273",
       "category": 202,
-      "name": "Yellow Socks",
+      "created_at": "2015-06-09",
       "description": "Pair of Yellow Socks",
-      "unit_cost": 29.9,
-      "quantity": 2,
       "discount": 5.0,
-      "created_at": "2015-06-09"
+      "name": "Yellow Socks",
+      "quantity": 2.0,
+      "sku": "0017273",
+      "unit_cost": 29.9
     }
   ],
-  "travel": {
-    "type": "flight",
-    "departure": {
-      "origin_airport": "CGH",
+  "status": "approved",
+  "tax_amount": 3.0,
+  "tenant":
+  {
+    "created_at": "2022-02-12T12:52:00Z",
+    "id": "548btm",
+    "name": "Tenant"
+  },
+  "timestamp": 123123123123,
+  "total_amount": 120.5,
+  "travel":
+  {
+    "departure":
+    {
+      "class": "economy",
+      "company": "Gol",
+      "date": "2015-05-07T00:00Z",
       "destination_airport": "SDU",
-      "origin_city": "São Paulo",
       "destination_city": "Rio de Janeiro",
-      "date": "2015-05-07T00:00Z",
+      "fare_basis": "Y",
       "number_of_connections": 0,
-      "class": "economy",
-      "fare_basis": "Y"
+      "origin_airport": "CGH",
+      "origin_city": "São Paulo"
     },
-    "return": {
-      "origin_airport": "SDU",
-      "destination_airport": "CGH",
-      "origin_city": "Rio de Janeiro",
-      "destination_city": "São Paulo",
-      "date": "2015-05-07T00:00Z",
-      "number_of_connections": 0,
-      "class": "economy",
-      "fare_basis": "Y"
-    },
-    "passengers": [
+    "expiration_date": "2022-05-12T15:25:30Z",
+    "passengers":
+    [
       {
-        "name": "Milton Tavares 1",
-        "document": "A1B2C3D1",
-        "document_type": "passport",
-        "frequent_traveler": false,
-        "special_needs": false
-      },
-      {
-        "name": "Milton Tavares 2",
-        "document": "A1B2C3D2",
-        "document_type": "passport",
-        "frequent_traveler": false,
+        "dob": "1970-01-01",
+        "document": "A1B2C3D4",
+        "document_type": "id",
+        "frequent_traveler": true,
+        "loyalty":
+        {
+          "category": "gold",
+          "program": "advantage"
+        },
+        "name": "Júlia da Silva",
+        "nationality": "BR",
         "special_needs": false
       }
-    ]
+    ],
+    "return":
+    {
+      "class": "economy",
+      "company": "Gol",
+      "date": "2015-05-07T00:00Z",
+      "destination_airport": "CGH",
+      "destination_city": "São Paulo",
+      "fare_basis": "Y",
+      "number_of_connections": 0,
+      "origin_airport": "SDU",
+      "origin_city": "Rio de Janeiro"
+    },
+    "type": "flight"
   },
-  "seller": {
-    "id": "seller_id",
-    "name": "Seller Name",
-    "created_at": "2015-06-09"
+  "vehicle":
+  {
+    "make": "Bentley",
+    "model": "Bacalar",
+    "owner":
+    {
+      "name": "Cicero",
+      "tax_id": "540.830.640-21"
+    },
+    "registration": "ABC1234",
+    "renavam": "12312312312",
+    "type": "car",
+    "usage": "private",
+    "vid": "5GZCZ43D13S812715"
   },
-  "status": "approved",
-  "delivery": {
-    "delivery_company": "GFL",
-    "delivery_method": "retira_loja",
-    "estimated_shipping_date": "2021-05-06",
-    "estimated_delivery_date": "2021-05-06"
-  }
+  "visitor": "a9031kdlas",
+  "triggered_decision_list": [
+    {
+      "decision": "DECLINE",
+      "trigger": "GUEST_DOCUMENT",
+      "type": "tax_id"
+    }
+  ],
+  "triggered_rules": [
+    {
+      "priority": -2,
+      "name": "CPFs Monitorados",
+      "analysis_type": "FRAUD",
+      "decision": "REVIEW"
+    }
+  ],
+  "analysis_layers": [
+    {
+      "recommendation": "REVIEW",
+      "original_recommendation": "REVIEW",
+      "is_exploring": false,
+      "analysis_type": "FRAUD",
+      "score": 0.3017217853308364
+    }
+  ]
 }

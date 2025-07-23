@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'date'
 
 FactoryGirl.define do
@@ -10,6 +12,11 @@ FactoryGirl.define do
       description 'Male Green T-Shirt V Neck'
       unit_cost 1999.99
       quantity 1.0
+      discount(-10.99)
+      created_at Date.new(2022, 4, 25)
+      delivery_type "express delivery"
+      delivery_sla_in_minutes 50
+      seller_id "11"
     end
 
     trait :yellow_socks do

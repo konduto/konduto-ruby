@@ -6,7 +6,12 @@
     "name": "Green T-Shirt",
     "description": "Male Green T-Shirt V Neck",
     "unit_cost": 1999.99,
-    "quantity": 1
+    "quantity": 1.0,
+    "discount": -10.99,
+    "created_at": "2022-04-25",
+    "delivery_type": "express delivery",
+    "delivery_sla_in_minutes": 50,
+    "seller_id": "11"
   },
   {
     "sku": "0017273",
@@ -14,7 +19,7 @@
     "name": "Yellow Socks",
     "description": "Pair of Yellow Socks",
     "unit_cost": 29.90,
-    "quantity": 2,
+    "quantity": 2.0,
     "discount": 5.00,
     "created_at": "2015-06-09"
   }

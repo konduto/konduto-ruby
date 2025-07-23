@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryGirl.define do
   factory :konduto_address do
     name 'Konduto'
@@ -7,5 +9,7 @@ FactoryGirl.define do
     city 'São Paulo'
     state 'SP'
     country 'BR'
+    lat(-23.565779450573725)
+    lon(-46.691031683668946)
   end
 end

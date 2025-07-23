@@ -1,0 +1,31 @@
+name: Github workflow gem develop
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.7
+      - run: bundle install
+      - name: Rubocop
+        run: rubocop
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.7
+      - name: Bundle install
+        run: bundle install
+      - name: Gem build
+        run: gem build
+      - name: Gem install
+        run: gem install konduto-ruby --local konduto-ruby-*.gem
+      - name: Run Tests
+        run: rake test
