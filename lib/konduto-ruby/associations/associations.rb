@@ -1,20 +1,21 @@
+# frozen_string_literal: true
+
 module Konduto
   module Associations
-
     def has_one(model, options = {})
       name = options[:alias] || model
 
-      self.send(:define_method, name) do
+      send(:define_method, name) do
         instance_variable_get("@#{name}") if instance_variable_defined?("@#{name}")
       end
 
-      self.send(:define_method, "#{name}=".to_sym) do |value|
+      send(:define_method, "#{name}=".to_sym) do |value|
         klass = "Konduto#{model.to_s.gsub(/_/, ' ').split.map(&:capitalize).join('')}"
 
         if value.class.to_s == klass
           instance_variable_set("@#{name}", value)
         elsif value.is_a? Hash
-          instance_variable_set("@#{name}", Object::const_get(klass).new(value))
+          instance_variable_set("@#{name}", Object.const_get(klass).new(value))
         else
           raise ArgumentError, "Expected class #{klass}, got #{value.class} at #{self.class}"
         end
@@ -24,11 +25,11 @@ module Konduto
     def has_many(model, options = {})
       name = options[:alias] || model
 
-      self.send(:define_method, name) do
+      send(:define_method, name) do
         instance_variable_get("@#{name}") if instance_variable_defined?("@#{name}")
       end
 
-      self.send(:define_method, "#{name}=".to_sym) do |arr|
+      send(:define_method, "#{name}=".to_sym) do |arr|
         klass = "Konduto#{model.to_s.gsub(/_/, ' ').split.map(&:capitalize).join('')}"
         temp_arr = []
 
@@ -36,7 +37,7 @@ module Konduto
           if value.class.to_s == klass
             temp_arr << value
           elsif value.is_a? Hash
-            temp_arr << Object::const_get(klass).new(value)
+            temp_arr << Object.const_get(klass).new(value)
           else
             raise ArgumentError, "Expected class #{klass}, got #{value.class} at #{self.class}"
           end

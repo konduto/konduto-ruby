@@ -1,0 +1,7 @@
+[
+  {
+    "decision": "DECLINE",
+    "trigger": "GUEST_DOCUMENT",
+    "type": "tax_id"
+  }
+]

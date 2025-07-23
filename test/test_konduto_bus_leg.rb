@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require 'date'
 
@@ -13,9 +15,9 @@ class TestKondutoBugLeg < Minitest::Test
 
   def test_validation
     bus_leg = KondutoBusLeg.new
-    assert_equal false, bus_leg.valid?
+    refute bus_leg.valid?
     bus_leg.origin_city = 'São Paulo'
-    assert_equal false, bus_leg.valid?
+    refute bus_leg.valid?
     bus_leg.destination_city = 'Rio de Janeiro'
     assert bus_leg.valid?
   end
