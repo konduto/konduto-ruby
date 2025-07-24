@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 FactoryGirl.define do
   factory :konduto_device do
     browser 'Chrome'
     cookie true
-    fingerprint 'e4f2c690951038a8f77aa583847';
+    fingerprint 'e4f2c690951038a8f77aa583847'
     flash true
     ip '170.149.100.10'
     javascript true

@@ -5,5 +5,7 @@
   "zip": "05406-200",
   "city": "São Paulo",
   "state": "SP",
-  "country": "BR"
+  "country": "BR",
+  "lat": -23.565779450573725,
+  "lon": -46.691031683668946
 }

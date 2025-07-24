@@ -1,0 +1,11 @@
+{
+  "id": "123456",
+  "category": "regular",
+  "premium": true,
+  "section": "Pista Premium",
+  "attendee": {
+    "document": "123456789",
+    "document_type": "cpf",
+    "dob": "1990-10-28"
+  }
+}

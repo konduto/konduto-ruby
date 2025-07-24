@@ -1,0 +1,8 @@
+[
+  {
+    "priority": -2,
+    "name": "CPFs Monitorados",
+    "analysis_type": "FRAUD",
+    "decision": "REVIEW"
+  }
+]

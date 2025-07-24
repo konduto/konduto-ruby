@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryGirl.define do
   factory :konduto_delivery do
     delivery_company 'GFL'
