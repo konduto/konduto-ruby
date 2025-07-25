@@ -1,13 +1,17 @@
-require 'minitest/autorun'
-require 'factory_girl'
+# frozen_string_literal: true
 
-class KondutoPaymentTest < MiniTest::Test
-  include FactoryGirl::Syntax::Methods
+require 'Minitest/autorun'
+require 'factory_bot'
+
+class KondutoPaymentTest < Minitest::Test
+  include FactoryBot::Syntax::Methods
 
   def test_serialization
-    payment = build_list(:konduto_payment, 1, :credit_card)
+    payments = []
+    payments << build(:konduto_payment, :credit_card)
+    payments << build(:konduto_payment, :voucher)
     payment_json = load_resource('payments.json')
 
-    assert_equal payment_json, payment.map { |value| value.to_hash }, 'serialization failed'
+    assert_equal payment_json, payments.map(&:to_hash), 'serialization failed'
   end
 end

@@ -1,8 +1,10 @@
-require 'minitest/autorun'
-require 'factory_girl'
+# frozen_string_literal: true
+
+require 'Minitest/autorun'
+require 'factory_bot'
 
 class TestKondutoItem < Minitest::Test
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def test_serialization
     item = build(:konduto_item, :green_shirt)

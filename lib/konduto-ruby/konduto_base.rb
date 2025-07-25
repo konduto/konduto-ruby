@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'associations/associations'
 require_relative 'validations/validations'
 require_relative 'attributes'
@@ -8,16 +10,14 @@ class KondutoBase
   include Konduto::Validations
 
   def initialize(*args)
-    unless args[0].nil?
-      args[0].each do |key, value|
-        unless value.nil?
-          if respond_to? "#{key}=".to_sym
-            send("#{key}=", value)
-          elsif key == 'class'
-            send('klass=', value)
-          else
-            instance_variable_set("@#{key}", value)
-          end
+    args[0]&.each do |key, value|
+      unless value.nil?
+        if respond_to? "#{key}=".to_sym
+          send("#{key}=", value)
+        elsif key == 'class'
+          send('klass=', value)
+        else
+          instance_variable_set("@#{key}", value)
         end
       end
     end
@@ -31,7 +31,7 @@ class KondutoBase
         strftime_pattern = defined_strftime_pattern(name) if defined_strftime_pattern?(name)
 
         if value.respond_to? :each
-          value = value.map {|v| v.to_hash }
+          value = value.map(&:to_hash)
         elsif !value.instance_variables.empty?
           value = value.to_hash
         elsif value.is_a?(DateTime)
@@ -47,14 +47,15 @@ class KondutoBase
     ]
   end
 
-  def to_json
-    raise RuntimeError, 'Invalid object for serialization' unless self.valid?
-    self.to_hash.to_json
+  def to_json(*_args)
+    raise 'Invalid object for serialization' unless valid?
+
+    to_hash.to_json
   end
 
   def ==(other)
-    self.instance_variables.each do |name|
-      return false unless self.instance_variable_get(name) == other.instance_variable_get(name)
+    instance_variables.each do |name|
+      return false unless instance_variable_get(name) == other.instance_variable_get(name)
     end
 
     true

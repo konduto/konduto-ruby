@@ -1,0 +1,4 @@
+{
+  "real_time": true,
+  "sales_channel": "app" //todo verificar enum
+}

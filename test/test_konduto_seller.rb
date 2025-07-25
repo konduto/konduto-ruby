@@ -1,9 +1,11 @@
-require 'minitest/autorun'
-require 'factory_girl'
+# frozen_string_literal: true
+
+require 'Minitest/autorun'
+require 'factory_bot'
 
 class TestKondutoSeller < Minitest::Test
-  include FactoryGirl::Syntax::Methods
-  
+  include FactoryBot::Syntax::Methods
+
   def test_serialization
     seller = build(:konduto_seller)
     sellerJSON = load_resource('seller.json')

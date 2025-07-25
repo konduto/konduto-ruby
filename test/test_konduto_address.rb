@@ -1,15 +1,17 @@
-require 'minitest/autorun'
-require 'factory_girl'
+# frozen_string_literal: true
 
-class KondutoAddressTest < MiniTest::Test
-  include FactoryGirl::Syntax::Methods
+require 'Minitest/autorun'
+require 'factory_bot'
+
+class KondutoAddressTest < Minitest::Test
+  include FactoryBot::Syntax::Methods
 
   def test_serialization
     address = build(:konduto_address)
 
     expectedJSON = load_resource('address.json')
     actualJSON   = address.to_hash
-    
+
     assert_equal expectedJSON, actualJSON, 'address serialization failed'
 
     address_from_json = KondutoAddress.new expectedJSON
