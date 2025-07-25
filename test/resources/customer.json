@@ -2,10 +2,16 @@
   "id": "1",
   "name": "José da Silva",
   "email": "jose.silva@gmail.com",
+  "dob": "1969-07-20",
+  "document_type": "cpf",
   "tax_id": "01234567890",
   "phone1": "11987654321",
   "phone2": "1133333333",
   "vip": false,
   "new": false,
-  "created_at": "2015-06-09"
+  "created_at": "2015-06-09",
+  "type": "A1",
+  "risk_level": "low",
+  "risk_score": 0.5,
+  "mother_name": "Maria Silva"
 }

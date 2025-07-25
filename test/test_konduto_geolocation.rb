@@ -1,4 +1,6 @@
-require 'minitest/autorun'
+# frozen_string_literal: true
+
+require 'Minitest/autorun'
 require 'factory_girl'
 
 class TestKondutoGeolocation < Minitest::Test

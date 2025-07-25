@@ -1,7 +1,9 @@
-require 'minitest/autorun'
+# frozen_string_literal: true
+
+require 'Minitest/autorun'
 require 'factory_girl'
 
-class KondutoDeliveryTest < MiniTest::Test
+class KondutoDeliveryTest < Minitest::Test
   include FactoryGirl::Syntax::Methods
 
   def setup
