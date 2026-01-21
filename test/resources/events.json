@@ -1,0 +1,47 @@
+[
+  {
+    "name":"Tia Ana no Maracanã",
+    "date":"2021-01-01T03:00:00Z",
+    "type":"show",
+    "subtype":"sertanejo",
+    "venue":{
+      "name":"Estádio do Maracanã",
+      "capacity":8000,
+      "address":"Av. Maracanã s/n",
+      "city":"Rio de Janeiro",
+      "state":"RJ",
+      "country":"BR"
+    },
+    "tickets":[
+      {
+        "id": "123456",
+        "category":"regular",
+        "premium":true,
+        "section":"Pista Premium",
+        "attendee":{
+          "document":"123456789",
+          "document_type":"cpf",
+          "dob":"1990-10-28"
+        }
+      }
+    ]
+  },
+  {
+    "name":"Heat @ Knicks",
+    "date":"2020-11-21T01:00:00Z",
+    "type":"sports",
+    "subtype":"NBA",
+    "tickets":[
+      {
+        "category":"regular",
+        "section":"General",
+        "premium":true
+      },
+      {
+        "category":"regular",
+        "section":"General",
+        "premium":true
+      }
+    ]
+  }
+]

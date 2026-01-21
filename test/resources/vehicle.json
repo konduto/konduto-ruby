@@ -1,0 +1,13 @@
+{
+  "vid": "5GZCZ43D13S812715",
+  "renavam": "12312312312",
+  "registration": "ABC1234",
+  "make": "Bentley",
+  "model": "Bacalar",
+  "owner": {
+    "tax_id": "123.123.123-12",
+    "name": "Cicero"
+  },
+  "type": "car",
+  "usage": "private"
+}

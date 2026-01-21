@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
-require 'factory_girl'
+require 'factory_bot'
 
 class TestKondutoNavigation < Minitest::Test
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def test_serialization
     navigation = build(:konduto_navigation)

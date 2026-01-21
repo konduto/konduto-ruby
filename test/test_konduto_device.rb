@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'factory_girl'
+require 'factory_bot'
 
-class KondutoDeviceTest < MiniTest::Test
-  include FactoryGirl::Syntax::Methods
+class KondutoDeviceTest < Minitest::Test
+  include FactoryBot::Syntax::Methods
 
   def test_serialization
     device = build(:konduto_device)

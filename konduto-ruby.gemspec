@@ -1,16 +1,26 @@
+# frozen_string_literal: true
+
+require_relative 'lib/konduto-ruby'
+
 Gem::Specification.new do |spec|
   spec.name         = 'konduto-ruby'
-  spec.version      = '2.1.2'
+  spec.version      = KondutoRuby::VERSION
   spec.authors      = ['Gabriel Custodio', 'Jonathan Cardoso de Campos', 'Konduto Development Team']
+  spec.date         = Time.now.utc.strftime('%Y-%m-%d')
   spec.email        = [%(gcmartins93@gmail.com jonathancardosodecampos@gmail.com support@konduto.com)]
   spec.homepage     = 'https://github.com/konduto/konduto-ruby'
   spec.summary      = ''
   spec.description  = 'A wrapper for konduto antifraud API'
-
-  spec.files        = Dir["{lib}/**/*.rb", "bin/*", "LICENSE", "*.md"]
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
+  spec.files        = Dir['{lib}/**/*.rb', 'LICENSE', '*.md']
   spec.require_path = 'lib'
-
   spec.license      = 'MIT'
 
-  spec.add_development_dependency 'factory_girl', '~> 4.7'
+  # tests
+  spec.add_development_dependency  'factory_bot', '~> 6.4'
+  spec.add_development_dependency  'minitest', '~> 5.25'
+  spec.add_development_dependency  'rake', '~> 13.3.0'
+  spec.add_development_dependency  'rubocop', '~> 1.79'
+  spec.add_development_dependency  'rubocop-minitest', '~> 0.38.1'
+  spec.add_development_dependency  'simplecov', '~> 0.22.0'
 end

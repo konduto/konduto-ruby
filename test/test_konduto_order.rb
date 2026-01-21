@@ -1,23 +1,25 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
-require 'factory_girl'
+require 'factory_bot'
 require 'konduto-ruby'
 
-class KondutoOrderTest < MiniTest::Test
-  include FactoryGirl::Syntax::Methods
+class KondutoOrderTest < Minitest::Test
+  include FactoryBot::Syntax::Methods
 
   def setup
-    FactoryGirl.reload
+    FactoryBot.reload
   end
 
   def test_valid
     order = KondutoOrder.new
-    assert_equal false, order.valid?, 'order should be invalid without id'
+    refute order.valid?, 'order should be invalid without id'
 
     order.id = 'order1'
-    assert_equal false, order.valid?, 'order should be invalid without total amount'
+    refute order.valid?, 'order should be invalid without total amount'
 
     order.total_amount = 120.1
-    assert_equal false, order.valid?, 'order should be invalid without customer'
+    refute order.valid?, 'order should be invalid without customer'
 
     order.customer = KondutoCustomer.new
     assert order.valid?, 'order should be valid'
@@ -36,6 +38,6 @@ class KondutoOrderTest < MiniTest::Test
 
   def test_invalid_serialization
     order = KondutoOrder.new
-    assert_raises(RuntimeError){ order.to_json }
+    assert_raises(RuntimeError) { order.to_json }
   end
 end
